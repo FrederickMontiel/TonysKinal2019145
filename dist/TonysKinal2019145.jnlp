@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="TonysKinal2019145.jnlp">
+  <information>
+    <title>TonysKinal2019145</title>
+    <vendor>DELL</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="TonysKinal2019145.jar" size="896910" download="eager" />
+    <jar href="lib\commons-collections-3.2.1.jar" size="575389" download="eager" />
+    <jar href="lib\commons-digester-2.1.jar" size="196768" download="eager" />
+    <jar href="lib\commons-logging-1.1.jar" size="52592" download="eager" />
+    <jar href="lib\groovy-all-2.0.1.jar" size="6191960" download="eager" />
+    <jar href="lib\iText-2.1.7.js2.jar" size="1130575" download="eager" />
+    <jar href="lib\jasperreports-5.6.0.jar" size="4989676" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.44.jar" size="999632" download="eager" />
+    <jar href="lib\poi-3.7-20101029.jar" size="1675036" download="eager" />
+    <jar href="lib\schudt-javafx-datepicker-0.0.2.jar" size="67087" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="TonysKinal2019145" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="org.frederickmontiel.system.Principal"  name="TonysKinal2019145" />
+  <update check="always"/>
+</jnlp>

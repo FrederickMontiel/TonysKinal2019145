@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="220.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.frederickmontiel.controller.Productos_Has_PlatosController">
+   <children>
+      <Pane prefHeight="220.0" prefWidth="334.0" style="-fx-background-color: #0279ca;">
+         <children>
+            <Label layoutX="18.0" layoutY="39.0" prefHeight="27.0" prefWidth="298.0" text="Codigo producto:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cmbIdProducto" layoutX="18.0" layoutY="72.0" prefHeight="25.0" prefWidth="290.0" />
+            <ComboBox fx:id="cmbIdPlato" layoutX="18.0" layoutY="141.0" prefHeight="25.0" prefWidth="290.0" />
+            <Label layoutX="18.0" layoutY="105.0" prefHeight="27.0" prefWidth="190.0" text="Codigo plato:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="333.0" prefHeight="219.0" prefWidth="582.0">
+         <children>
+            <TableView fx:id="tblPro_Has_Pla" layoutY="55.0" onMouseClicked="#seleccionarElemento" prefHeight="165.0" prefWidth="582.0">
+              <columns>
+                <TableColumn fx:id="colIdPlato" prefWidth="291.0" text="Producto" />
+                  <TableColumn fx:id="colIdProducto" prefWidth="287.0" text="Plato" />
+              </columns>
+            </TableView>
+            <Label layoutX="171.0" layoutY="10.0" prefHeight="31.0" prefWidth="242.0" text="Productos - Platos" textAlignment="CENTER">
+               <font>
+                  <Font name="SansSerif Bold Italic" size="26.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="31.0" fitWidth="38.0" layoutX="537.0" layoutY="10.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/regresar.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

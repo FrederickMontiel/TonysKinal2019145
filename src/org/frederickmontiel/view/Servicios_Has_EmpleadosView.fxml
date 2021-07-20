@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="454.0" prefWidth="1120.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.frederickmontiel.controller.Servicios_Has_EmpleadosController">
+   <children>
+      <Pane prefHeight="454.0" prefWidth="334.0" style="-fx-background-color: #0279ca;">
+         <children>
+            <Label layoutX="15.0" layoutY="14.0" prefHeight="27.0" prefWidth="208.0" text="Fecha:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="257.0" prefHeight="27.0" prefWidth="200.0" text="Tipo Plato:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnNuevo" layoutX="18.0" layoutY="340.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: white; -fx-border-radius: 3px; -fx-background-radius: 3px;" text="Nuevo">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEliminar" layoutX="187.0" layoutY="340.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: white; -fx-border-radius: 3px; -fx-background-radius: 3px;" text="Eliminar">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEditar" layoutX="18.0" layoutY="396.0" mnemonicParsing="false" onAction="#editar" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: white; -fx-border-radius: 3px; -fx-background-radius: 3px;" text="Editar">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnReporte" layoutX="187.0" layoutY="396.0" mnemonicParsing="false" onAction="#reporte" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: white; -fx-border-radius: 3px; -fx-background-radius: 3px;" text="Cancelar">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="cmbIdServicio" layoutX="15.0" layoutY="284.0" prefHeight="25.0" prefWidth="303.0" />
+            <TextField fx:id="txtLugarEvento" layoutX="16.0" layoutY="164.0" prefHeight="25.0" prefWidth="303.0" />
+            <Label layoutX="16.0" layoutY="137.0" prefHeight="27.0" prefWidth="163.0" text="Lugar:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="200.0" prefHeight="27.0" prefWidth="122.0" text="Empleado:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtHoraEvento" layoutX="16.0" layoutY="104.0" prefHeight="25.0" prefWidth="303.0" />
+            <Label layoutX="18.0" layoutY="77.0" prefHeight="27.0" prefWidth="163.0" text="Hora:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="fecha" layoutX="15.0" layoutY="41.0" prefHeight="25.0" prefWidth="303.0" />
+            <ComboBox fx:id="cmbIdEmpleado" layoutX="17.0" layoutY="227.0" prefHeight="25.0" prefWidth="303.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="333.0" prefHeight="454.0" prefWidth="787.0">
+         <children>
+            <TableView fx:id="tblServicios_Has_Empleados" layoutY="55.0" onMouseClicked="#seleccionarElemento" prefHeight="399.0" prefWidth="787.0">
+              <columns>
+                <TableColumn fx:id="colFechaEvento" prefWidth="118.0" text="Fecha" />
+                <TableColumn fx:id="colHoraEvento" minWidth="5.0" prefWidth="110.0" text="Hora" />
+                  <TableColumn fx:id="colLugarEvento" prefWidth="398.0" text="Lugar" />
+                  <TableColumn fx:id="colIdEmpleado" prefWidth="81.0" text="Empleado" />
+                  <TableColumn fx:id="colIdServicio" prefWidth="77.0" text="Servicio" />
+              </columns>
+            </TableView>
+            <Label layoutX="249.0" layoutY="10.0" prefHeight="31.0" prefWidth="290.0" text="Servicios - Empleados" textAlignment="CENTER">
+               <font>
+                  <Font name="SansSerif Bold Italic" size="26.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="31.0" fitWidth="38.0" layoutX="746.0" layoutY="10.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/regresar.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

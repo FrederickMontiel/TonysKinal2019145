@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.frederickmontiel.controller.EmpresasController">
+   <children>
+      <Pane prefHeight="401.0" prefWidth="334.0" style="-fx-background-color: #0279ca;">
+         <children>
+            <TextField fx:id="txtIdEmpresa" layoutX="23.0" layoutY="50.0" prefHeight="25.0" prefWidth="290.0" />
+            <TextField fx:id="txtNombreEmpresa" layoutX="23.0" layoutY="107.0" prefHeight="25.0" prefWidth="290.0" />
+            <TextField fx:id="txtDireccionEmpresa" layoutX="23.0" layoutY="166.0" prefHeight="25.0" prefWidth="290.0" />
+            <TextField fx:id="txtTelefonoEmpresa" layoutX="23.0" layoutY="227.0" prefHeight="25.0" prefWidth="290.0" />
+            <Label layoutX="23.0" layoutY="22.0" prefHeight="27.0" prefWidth="138.0" text="Id de Empresa:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="80.0" prefHeight="27.0" prefWidth="190.0" text="Nombre de Empresa:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="139.0" prefHeight="27.0" prefWidth="201.0" text="Dirección de Empresa:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="200.0" prefHeight="27.0" prefWidth="190.0" text="Teléfono de Empresa" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnNuevo" layoutX="23.0" layoutY="278.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: white; -fx-border-radius: 3px; -fx-background-radius: 3px;" text="Nuevo">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEliminar" layoutX="184.0" layoutY="278.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: white; -fx-border-radius: 3px; -fx-background-radius: 3px;" text="Eliminar">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEditar" layoutX="23.0" layoutY="334.0" mnemonicParsing="false" onAction="#editar" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: white; -fx-border-radius: 3px; -fx-background-radius: 3px;" text="Editar">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnReporte" layoutX="184.0" layoutY="334.0" mnemonicParsing="false" onAction="#reporte" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: white; -fx-border-radius: 3px; -fx-background-radius: 3px;" text="Reportar">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="333.0" prefHeight="401.0" prefWidth="582.0">
+         <children>
+            <TableView fx:id="tblEmpresas" layoutY="55.0" onMouseClicked="#seleccionarElemento" prefHeight="297.0" prefWidth="582.0">
+              <columns>
+                <TableColumn fx:id="colIdEmpresa" prefWidth="78.0" text="Id Empresa" />
+                <TableColumn fx:id="colNombreEmpresa" prefWidth="155.0" text="Nombre Empresa" />
+                  <TableColumn fx:id="colDireccionEmpresa" prefWidth="220.0" text="Dirección Empresa" />
+                  <TableColumn fx:id="colTelefonoEmpresa" prefWidth="128.0" text="Telefono Empresa" />
+              </columns>
+            </TableView>
+            <Label layoutX="227.0" layoutY="10.0" prefHeight="31.0" prefWidth="129.0" text="Empresas" textAlignment="CENTER">
+               <font>
+                  <Font name="SansSerif Bold Italic" size="26.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="31.0" fitWidth="38.0" layoutX="537.0" layoutY="10.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/regresar.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="74.0" layoutY="359.0" mnemonicParsing="false" onMouseClicked="#ventanaPresupuesto" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: #e5e5e5; -fx-border-radius: 3px; -fx-background-radius: 3px;" text="Presupuesto">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="374.0" layoutY="359.0" mnemonicParsing="false" onMouseClicked="#ventanaServicios" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: #e5e5e5; -fx-border-radius: 3px; -fx-background-radius: 3px;" text="Servicio">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

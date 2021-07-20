@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="429.0" prefWidth="689.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.frederickmontiel.controller.MenuPrincipalController">
+   <children>
+      <MenuBar prefHeight="32.0" prefWidth="689.0" style="-fx-background-color: #00bcd4; -fx-text-fill: #fff;">
+        <menus>
+          <Menu mnemonicParsing="false" text="Modulos">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaEmpresas" text="Empresas" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTipoEmpleado" text="Tipo Empleado" />
+              <MenuItem mnemonicParsing="false" onAction="#ventanaProducto" text="Producto" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTipoPlato" text="Tipo plato" />
+                  <MenuItem mnemonicParsing="false" onAction="#cerrarVentana" text="Cerrar" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Uniones">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaPro_Has_Plato" text="Productos - Platos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaSer_Has_Pla" text="Servicios - Platos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaSer_Has_Emp" text="Servicios - Empleados" />
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="?">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaProgramador" text="Programador" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fitHeight="400.0" fitWidth="689.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/fondo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

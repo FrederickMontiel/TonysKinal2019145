@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0" prefWidth="1334.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.frederickmontiel.controller.EmpleadoController">
+   <children>
+      <Pane prefHeight="631.0" prefWidth="334.0" style="-fx-background-color: #0279ca;">
+         <children>
+            <TextField fx:id="txtIdEmpleado" layoutX="15.0" layoutY="50.0" prefHeight="25.0" prefWidth="303.0" />
+            <Label layoutX="15.0" layoutY="23.0" prefHeight="27.0" prefWidth="179.0" text="Id empleado:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="81.0" prefHeight="27.0" prefWidth="190.0" text="Numero empleado:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="18.0" layoutY="441.0" prefHeight="27.0" prefWidth="143.0" text="Tipo empleado:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnNuevo" layoutX="18.0" layoutY="521.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: white; -fx-border-radius: 3px; -fx-background-radius: 3px;" text="Nuevo">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEliminar" layoutX="187.0" layoutY="521.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: white; -fx-border-radius: 3px; -fx-background-radius: 3px;" text="Eliminar">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEditar" layoutX="18.0" layoutY="577.0" mnemonicParsing="false" onAction="#editar" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: white; -fx-border-radius: 3px; -fx-background-radius: 3px;" text="Editar">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnReporte" layoutX="187.0" layoutY="577.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: white; -fx-border-radius: 3px; -fx-background-radius: 3px;" text="Cancelar">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="cmbIdTipoEmpleado" layoutX="15.0" layoutY="468.0" prefHeight="25.0" prefWidth="303.0" />
+            <TextField fx:id="txtDireccion" layoutX="14.0" layoutY="290.0" prefHeight="25.0" prefWidth="303.0" />
+            <Label fx:id="asdasd" layoutX="14.0" layoutY="263.0" prefHeight="27.0" prefWidth="208.0" text="Direccion empleado:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtTelefono" layoutX="14.0" layoutY="350.0" prefHeight="25.0" prefWidth="303.0" />
+            <Label layoutX="15.0" layoutY="323.0" prefHeight="27.0" prefWidth="179.0" text="Telefono empleado:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNombres" layoutX="14.0" layoutY="171.0" prefHeight="25.0" prefWidth="303.0" />
+            <Label layoutX="16.0" layoutY="144.0" prefHeight="27.0" prefWidth="179.0" text="Nombres empleado:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNumero" layoutX="14.0" layoutY="108.0" prefHeight="25.0" prefWidth="303.0" />
+            <Label layoutX="14.0" layoutY="382.0" prefHeight="27.0" prefWidth="179.0" text="Grado cocinero:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtGradoCocinero" layoutX="15.0" layoutY="409.0" prefHeight="25.0" prefWidth="303.0" />
+            <Label layoutX="15.0" layoutY="204.0" prefHeight="27.0" prefWidth="208.0" text="Apellidos empleado:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtApellidos" layoutX="16.0" layoutY="231.0" prefHeight="25.0" prefWidth="303.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="333.0" prefHeight="631.0" prefWidth="1001.0">
+         <children>
+            <TableView fx:id="tblEmpleados" layoutY="55.0" onMouseClicked="#seleccionarElemento" prefHeight="577.0" prefWidth="1001.0">
+              <columns>
+                <TableColumn fx:id="colIdEmpleado" prefWidth="48.0" text="Id" />
+                <TableColumn fx:id="colNumeroEmpleado" prefWidth="100.0" text="Numero" />
+                  <TableColumn fx:id="colNombres" prefWidth="170.0" text="Nombres" />
+                  <TableColumn fx:id="colApellidos" prefWidth="159.0" text="Apellidos" />
+                  <TableColumn fx:id="colDireccion" prefWidth="154.0" text="Dirección" />
+                  <TableColumn fx:id="colTelefono" prefWidth="97.0" text="Teléfono" />
+                  <TableColumn fx:id="colGradoCocinero" prefWidth="140.0" text="Grado Cocinero" />
+                  <TableColumn fx:id="colIdTipoEmpleado" prefWidth="140.0" text="Tipo Empleado" />
+              </columns>
+            </TableView>
+            <Label layoutX="389.0" layoutY="10.0" prefHeight="31.0" prefWidth="152.0" text="Empleados" textAlignment="CENTER">
+               <font>
+                  <Font name="SansSerif Bold Italic" size="26.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="31.0" fitWidth="38.0" layoutX="956.0" layoutY="14.0" onMouseClicked="#ventanaTipoEmpleado" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/regresar.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

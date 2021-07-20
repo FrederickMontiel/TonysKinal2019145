@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="1202.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.frederickmontiel.controller.PlatoController">
+   <children>
+      <Pane prefHeight="508.0" prefWidth="334.0" style="-fx-background-color: #0279ca;">
+         <children>
+            <TextField fx:id="txtIdPlato" layoutX="15.0" layoutY="50.0" prefHeight="25.0" prefWidth="303.0" />
+            <TextField fx:id="txtNombrePlato" layoutX="15.0" layoutY="109.0" prefHeight="25.0" prefWidth="303.0" />
+            <Label layoutX="15.0" layoutY="23.0" prefHeight="27.0" prefWidth="179.0" text="Id:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="82.0" prefHeight="27.0" prefWidth="208.0" text="Nombre:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="325.0" prefHeight="27.0" prefWidth="200.0" text="Tipo Plato:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnNuevo" layoutX="17.0" layoutY="397.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: white; -fx-border-radius: 3px; -fx-background-radius: 3px;" text="Nuevo">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEliminar" layoutX="186.0" layoutY="397.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: white; -fx-border-radius: 3px; -fx-background-radius: 3px;" text="Eliminar">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEditar" layoutX="17.0" layoutY="453.0" mnemonicParsing="false" onAction="#editar" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: white; -fx-border-radius: 3px; -fx-background-radius: 3px;" text="Editar">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnCancelar" layoutX="186.0" layoutY="453.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: white; -fx-border-radius: 3px; -fx-background-radius: 3px;" text="Cancelar">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="cmbIdTipoPlato" layoutX="14.0" layoutY="352.0" prefHeight="25.0" prefWidth="303.0" />
+            <TextField fx:id="txtCantidad" layoutX="15.0" layoutY="232.0" prefHeight="25.0" prefWidth="303.0" />
+            <Label layoutX="15.0" layoutY="205.0" prefHeight="27.0" prefWidth="163.0" text="Cantidad:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtDescripcionPlato" layoutX="15.0" layoutY="292.0" prefHeight="25.0" prefWidth="303.0" />
+            <Label layoutX="15.0" layoutY="268.0" prefHeight="27.0" prefWidth="122.0" text="Descripción:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtPrecioPlato" layoutX="15.0" layoutY="172.0" prefHeight="25.0" prefWidth="303.0" />
+            <Label layoutX="17.0" layoutY="145.0" prefHeight="27.0" prefWidth="163.0" text="Precio:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="333.0" prefHeight="508.0" prefWidth="869.0">
+         <children>
+            <TableView fx:id="tblPlatos" layoutY="55.0" onMouseClicked="#seleccionarElemento" prefHeight="454.0" prefWidth="869.0">
+              <columns>
+                <TableColumn fx:id="colIdPlato" prefWidth="60.0" text="Id" />
+                <TableColumn fx:id="colNombrePlato" prefWidth="241.0" text="Nombre" />
+                  <TableColumn fx:id="colPrecioPlato" prefWidth="77.0" text="Precio" />
+                  <TableColumn fx:id="colCantidad" prefWidth="83.0" text="Cantidad" />
+                  <TableColumn fx:id="colDescripcionPlato" prefWidth="323.0" text="Descripción" />
+                  <TableColumn fx:id="colIdTipoPlato" minWidth="0.0" prefWidth="84.0" text="Tipo Plato" />
+              </columns>
+            </TableView>
+            <Label layoutX="394.0" layoutY="10.0" prefHeight="31.0" prefWidth="81.0" text="Platos" textAlignment="CENTER">
+               <font>
+                  <Font name="SansSerif Bold Italic" size="26.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="31.0" fitWidth="38.0" layoutX="824.0" layoutY="10.0" onMouseClicked="#ventanaTipoPlato" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/regresar.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

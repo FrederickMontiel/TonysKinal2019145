@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteEmpresa" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cb02780c-5bbb-4417-95fc-f0da39cfb4e1">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_ListarEmpresas();]]>
+	</queryString>
+	<field name="idEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="nombreEmpresa_1" class="java.lang.Integer" resetType="Column" calculation="Count">
+		<variableExpression><![CDATA[$F{nombreEmpresa}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="130" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Transparent" x="35" y="104" width="123" height="26" uuid="56766fc3-fae0-4dce-b27e-75d145d15c38"/>
+				<textElement>
+					<font fontName="Forte" size="15" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[TONY'S KINAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="237" y="52" width="260" height="38" uuid="f93979e1-9a67-476b-8824-9888599d71c6"/>
+				<textElement>
+					<font fontName="SansSerif" size="25"/>
+				</textElement>
+				<text><![CDATA[REPORTE EMPRESAS]]></text>
+			</staticText>
+			<image>
+				<reportElement x="50" y="0" width="123" height="104" uuid="c2815a66-7736-4101-979c-227ef59cd968"/>
+				<imageExpression><![CDATA["C:\\Users\\DELL\\Documents\\NetBeansProjects\\TonysKinal2019145\\src\\org\\frederickmontiel\\image\\icono.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="25" y="0" width="100" height="20" uuid="5918dd96-1c5b-4449-9122-6b6a2b4503ac"/>
+				<textElement textAlignment="Justified">
+					<font isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Codigo Empresa]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="24" width="572" height="1" uuid="32cce76e-c651-4011-871e-5ff2e5339f9e"/>
+			</line>
+			<staticText>
+				<reportElement x="161" y="0" width="100" height="20" uuid="89047141-f5e8-499a-a394-782e2f4129ab"/>
+				<textElement textAlignment="Justified">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="306" y="0" width="100" height="20" uuid="52caaf7a-7c2a-4b67-a928-c6b525312106"/>
+				<text><![CDATA[Direccion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="443" y="0" width="100" height="20" uuid="e4339688-de43-428c-b3a3-66220c042bcb"/>
+				<text><![CDATA[telefono]]></text>
+			</staticText>
+			<line>
+				<reportElement mode="Transparent" x="0" y="0" width="572" height="1" forecolor="#CC9900" uuid="c6acbbea-aa8f-47b2-8da7-884c101b46c3"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="25" y="0" width="100" height="20" uuid="4fb33e8b-a9dd-4aa8-9b44-6fd8bbd03168"/>
+				<textElement textAlignment="Justified">
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{idEmpresa}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement mode="Transparent" x="0" y="20" width="572" height="1" uuid="16690f9e-d272-4730-b05e-4be545397b44"/>
+			</line>
+			<textField>
+				<reportElement x="306" y="0" width="100" height="20" uuid="fecdd58a-c62d-4934-a8f7-a4d51c870e1f"/>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="443" y="1" width="100" height="20" uuid="d2521ca2-c058-4c4a-9019-85cedfef110e"/>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="161" y="1" width="100" height="20" uuid="2c6c98a1-26b5-41dc-9e0e-69e7ff3dcf5b"/>
+				<textElement textAlignment="Justified">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreEmpresa}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="34" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="40" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="21" width="572" height="19" uuid="8144a46f-1191-40ed-9ebf-65ef2c46d059"/>
+				<imageExpression><![CDATA["C:\\Users\\DELL\\Documents\\NetBeansProjects\\TonysKinal2019145\\src\\org\\frederickmontiel\\image\\membretado.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>
